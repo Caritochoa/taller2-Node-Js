@@ -1,0 +1,161 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+    * {
+  max-width: 700px;
+  margin: auto;
+}
+
+
+/*body {
+    min-width: 500px;
+}*/
+
+div {
+  border-radius: 5px;
+}
+
+#header {
+  height: 40px;
+  width: 100%;
+  background-image: url("paws.png");
+  position: fixed;
+  z-index: 1;
+}
+
+#title {
+  margin-left: 3%;
+}
+
+#footer {
+  height: 50px;
+  width: 100%;
+  background-color: #ffcccc;
+  clear: both;
+  position: relative;
+}
+
+.left {
+  height: 1000px;
+  width: 45px;
+  background-image: url("paws.png");
+  float: left;
+  position: fixed;
+}
+
+.right {
+  height: 1000px;
+  width: 45px;
+  background-image: url("paws.png");
+  float: right;
+  position: inherit;
+}
+
+.stuff {
+  display: inline-block;
+  margin-top: 6px;
+  margin-left: 55px;
+  width: 75%;
+  height: 1000px;
+}
+
+p,
+li {
+  font-family: 'Cormorant Garamond';
+}
+
+.head {
+  font-size: 20px;
+}
+
+#name {
+  font-family: Sacramento;
+  float: right;
+  margin-top: 10px;
+  margin-right: 4%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 430px) {
+  .left,
+  .right {
+    display: none;
+  }
+  .stuff {
+    width: 100%;
+    margin-left: 10px;
+  }
+}
+    
+    </style>
+
+</head>
+<body>
+
+<div id="header"></div>
+<div class="left"></div>
+<div class="stuff">
+  <br><br>
+  <h1>Hoja de vida </h1>
+  <h2>Michin</h2>
+  <img src="catmeme1.png" width = "150px" heigth = "150px" alt="">
+  <hr />
+  <br>
+  <p class="head">Intereses</p>
+  <ul>
+    <li>Maullar</li>
+    <li>Dormir</li>
+    <li>Tomar el Sol</li>
+    <li>Arañar el sofá</li>
+    <li>Morder el perro</li>
+  </ul>
+
+  <hr />
+  <p class="head">Habilidades</p>
+  <ul>
+    <li>Sacar al perro de su cama</li>
+    <li>Esconderme por un dia entero</li>
+  </ul>
+
+  <hr />
+  <p class="head">Educación</p>
+  <ul>
+    <a href="http://mci12.com/udelavida/">
+      <li>Universidad de la vida </li>
+    </a>
+    <!--Link-->
+    <a href="http://mci12.com/udelavida/">
+      <li>Universidad de los gatos</li>
+    </a>
+    <li>Especialización en descanso y relajacion Felina</li>
+  </ul>
+  <hr />
+
+  <p class="head">Experiencia</p>
+  <ul>
+    <li>Gato callejero por un tiempo</li>
+    <li>Gato de casa </li>
+  </ul>
+  <hr />
+  <p class="head">Extracurriculares</p>
+  <ul>
+    <li>felinos  Club</li>
+    <li>garras Club</li>
+    <li>Club del sueño</li>
+  </ul>
+</div>
+<div class="right"></div>
+<div id="footer">
+  <h2 id="name">Contrátame</h2></div>
+  <div>
+      <img src="paws.png" height="300px" width="900px" alt="">
+  </div>
+
+  </body>
+  </html>

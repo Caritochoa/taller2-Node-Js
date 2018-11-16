@@ -105,7 +105,15 @@ a {
   <h1>Hoja de vida </h1>
   <h2>Michin</h2>
   <img src="catmeme1.png" width = "150px" heigth = "150px" alt="">
-  <hr />
+   
+    <!-- Reloj html  el js esta inline abajo-->
+    <h2> Tiempo para ser contratado </h2>
+    <h1><time>00:00:00</time></h1>
+<button id="start">start</button>
+<button id="stop">stop</button>
+<button id="clear">clear</button>
+  
+    <hr />
   <br>
   <p class="head">Intereses</p>
   <ul>
@@ -156,6 +164,52 @@ a {
   <div>
       <img src="paws.png" height="300px" width="900px" alt="">
   </div>
+    <script>
+const h1 = document.getElementsByTagName('h1')[0];
+const start = document.getElementById('start');
+const stop = document.getElementById('stop');
+const clear = document.getElementById('clear');
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
+let t;
+
+function add() {
+    seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+        if (minutes >= 60) {
+            minutes = 0;
+            hours++;
+        }
+    }
+    
+    h1.textContent = `${hours ? (hours > 9 ? hours : "0" + hours) : "00"}:${minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00"}:${seconds > 9 ? seconds : "0" + seconds}`;
+
+    timer();
+}
+function timer() {
+    t = setTimeout(add, 1000);
+}
+timer();
+
+
+/* Start button */
+start.onclick = timer;
+
+/* Stop button */
+stop.onclick = () => {
+    clearTimeout(t);
+}
+
+/* Clear button */
+clear.onclick = () => {
+    h1.textContent = "00:00:00";
+    seconds = 0; minutes = 0; hours = 0;
+}
+        
+    </script>
 
   </body>
   </html>
